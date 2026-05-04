@@ -1,0 +1,12 @@
+{
+  "name": "diabetes-detection-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Final year college project with React, Express and Python ML service.",
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "client": "npm run dev --prefix client",
+    "server": "npm start --prefix server",
+    "ml": "cd ml-api && python app.py"
+  }
+}
