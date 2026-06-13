@@ -67,7 +67,8 @@ function Prediction() {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/predict", {
+      // ✅ FIXED: Changed port 5000 to 8000, and 'localhost' to '127.0.0.1' to match Flask network host
+      const response = await fetch("http://127.0.0.1:8000/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
