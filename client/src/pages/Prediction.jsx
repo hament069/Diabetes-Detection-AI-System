@@ -65,11 +65,10 @@ function Prediction() {
       Object.entries(formData).map(([key, value]) => [key, Number(value)])
     );
 
-    try {
+  try {
       setLoading(true);
       
-      // ✅ FIXED: Changed local URL to your live Render Web Service URL
-      const response = await fetch("https://diabetes-detection-ai-system.onrender.com/predict", {
+      const response = await fetch("https://diabetes-detection-ai-system-api.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
