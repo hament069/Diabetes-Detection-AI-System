@@ -67,8 +67,9 @@ function Prediction() {
 
     try {
       setLoading(true);
-      // ✅ FIXED: Changed port 5000 to 8000, and 'localhost' to '127.0.0.1' to match Flask network host
-      const response = await fetch("http://127.0.0.1:8000/predict", {
+      
+      // ✅ FIXED: Changed local URL to your live Render Web Service URL
+      const response = await fetch("https://diabetes-detection-ai-system.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
